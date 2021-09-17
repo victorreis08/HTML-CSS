@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          
+            /*criar base*/
+            label span{
+                display: inline-block;
+                width:60px;
+                height: 30px;
+                background-color: black;
+                border-radius: 30px;
+            }
+             /*criar check*/
+            label span:before{
+                content:'';
+                display: block;
+                background-color: #eee;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin: 5px;
+                transition: all .2s ease-in-out;
+            }
+            
+            /*mover check*/
+            label input:checked + span:before{
+                transform: translateX(30px);
+                background-color: red;
+            }
+            
+            input{
+                opacity: 0;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+                
+            }
+            
+            label input:focus + span{
+               box-shadow: 0 0 0 1px red;
+            }
+        </style>
+    </head>
+    <body>
+        <label>
+            <input type="checkbox">
+            <span></span>
+            Esporte
+        </label>
+        <label>
+            <input type="checkbox">
+            <span></span>
+            Política
+        </label>
+        <label>
+            <input type="checkbox">
+            <span></span>
+            Educação
+        </label>
+    </body>
+</html>

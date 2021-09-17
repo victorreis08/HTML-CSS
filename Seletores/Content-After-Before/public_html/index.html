@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div{
+                border:3px solid red;
+                padding: 25px;
+                position: relative;
+            }
+            
+            div:before{
+                content: "texto before";
+                
+            }
+            
+            div:after{
+                content: "texto after";
+            }
+            
+            div:after{
+                content:"";
+                background-color: blue;
+                width: 25px;
+                height: 25px;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div>Texto principal</div>
+        
+        <article>
+            <p>Antes do titulo</p>
+            <h3>Titulo</h3>
+            <p>Paragrafo <a href="">Link</a></p>
+            <p>Paragrafo <a href="">Link</a></p>
+            <p>Paragrafo <a href="">Link</a></p>
+            <p>Paragrafo <a href="">Link</a></p>
+            <p>Paragrafo <a href="">Link</a></p>
+            <p>Paragrafo <a href="">Link</a></p>
+        </article>
+    </body>
+</html>

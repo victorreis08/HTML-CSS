@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SelenoresCompostos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+            /*Selecionar primeiro filho e alterar a tag a*/
+            article:nth-child(1) a{
+                color: red;
+            }
+            /*Selecionar terceiro filho article e selecionar o filho direto paragrafo */
+            article:nth-child(3) > p{
+                color: red;
+            }
+            /*pagrafo q vem imediatamente após H3*/
+            article:nth-child(5) h3 + p{
+                color: red;
+            }
+            /*todos os filhos de h3*/
+            article:nth-child(7) h3 ~ p{
+                color: orange;
+            }
+
+            /*todos os articles com cor laranja exceto com a classe destaque*/
+            article:not(.destaque){
+                color:orange;
+            }
+            .destaque{
+                background-color: yellow;
+            }
+
+
+            /*a com href cerquilha*/
+            a[href="#"]{
+                opacity: .5;
+            }
+            /*Todo link q inicia com https*/
+            a[href^="https"]{
+                color: green;
+            }
+
+            /*link com atributo title*/
+            a[title]{
+                color: greenyellow;
+            }
+
+            /*todo link q termina com .pdf*/
+            a[href$=".pdf"]{
+                color: firebrick;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <h3>Título</h3>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+        </article>
+
+        <hr/>
+        <article>
+            <h3>Título</h3>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+        </article>
+
+        <hr/>
+        <article>
+            <h3>Título</h3>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+        </article>
+
+        <hr/>
+        <article>
+            <h3>Título</h3>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+        </article>
+
+        <article class="destaque">
+            <h3>Título</h3>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+            <p>Paragrafo <a href="#">Link <b>Negrito</b></a></p>
+        </article>
+
+
+        <ul>
+            <li><a href="#">link falso</a></li>
+            <li><a href="#">link falso</a></li>
+            <li><a href="https:\\google.com.br" target="_blank">link externo</a></li>
+            <li><a title="ola" href="blas">link interno</a></li>
+            <li><a title="ola" href="blas.pdf">link pdf</a></li>
+        </ul>
+    </body>
+</html>

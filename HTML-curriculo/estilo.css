@@ -1,0 +1,50 @@
+/*folha de estilo css*/
+body{
+  width: 80%;
+  margin: auto;
+}
+
+.titulo{
+  margin-top: 30px;
+  padding: 10px;
+  font-family: arial;
+  text-align: center;
+  background-color: orange;
+  color: red;
+  border-bottom: solid 5px red;
+  border-radius: 5px;
+}
+
+
+h2{
+  margin-top: 30px;
+  padding: 10px;
+  background-color: rgb(56, 16, 19);
+  border-bottom: 5px solid orange;
+  text-align: center;
+  font-family: arial;
+  color: orange;
+  border-radius: 5px;
+}
+
+ul{
+  padding-left: 0px;
+}
+li{
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(62, 164, 24);
+
+}
+a:hover{
+  color:rgb(192, 69, 226);
+}
+
+h2:hover{
+  background-color: #00ffdc;
+  transition: 1s;
+}
